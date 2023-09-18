@@ -47,9 +47,10 @@ const Wrapper = styled.section`
   }
   .btn {
     display: block;
-    width: 148px;
+    width: 220px;
     margin: 0 auto;
     text-align: center;
+    padding: 8px 0px;
   }
   @media (min-width: 576px) {
     .featured {

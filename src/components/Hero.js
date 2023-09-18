@@ -1,15 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import heroBcg from '../assets/hero-bcg.jpeg'
-import heroBcg2 from '../assets/hero-bcg-2.jpeg'
+import heroBcg from '../assets/hero-bcg.svg'
+
 const Hero = () => {
   return (
     <Wrapper className='section-center'>
       <article className='content'>
         <h1>
-          design your <br />
-          comfort zone
+          We Enjoy <br />
+          Our Gadgets
         </h1>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, at
@@ -23,7 +23,7 @@ const Hero = () => {
       </article>
       <article className='img-container'>
         <img src={heroBcg} alt='nice table' className='main-img' />
-        <img src={heroBcg2} alt='person working' className='accent-img' />
+    
       </article>
     </Wrapper>
   )
@@ -55,7 +55,7 @@ const Wrapper = styled.section`
       font-size: 1.25rem;
     }
     .hero-btn {
-      padding: 0.75rem 1.5rem;
+      padding: 0.50rem 1.5rem;
       font-size: 1rem;
     }
     .img-container {
@@ -78,16 +78,7 @@ const Wrapper = styled.section`
       transform: translateX(-50%);
       border-radius: var(--radius);
     }
-    .img-container::before {
-      content: '';
-      position: absolute;
-      width: 10%;
-      height: 80%;
-      background: var(--clr-primary-9);
-      bottom: 0%;
-      left: -8%;
-      border-radius: var(--radius);
-    }
+
   }
 `
 

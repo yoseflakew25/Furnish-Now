@@ -1,21 +1,39 @@
-import React from 'react'
-import styled from 'styled-components'
-import logo from '../assets/logo.svg'
-import { FaBars } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
-import { links } from '../utils/constants'
-import CartButtons from './CartButtons'
-import { useProductsContext } from '../context/products_context'
-import { useUserContext } from '../context/user_context'
+import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
+import { FaBars } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import { links } from '../utils/constants';
+import CartButtons from './CartButtons';
+import { useProductsContext } from '../context/products_context';
+import { useUserContext } from '../context/user_context';
+
 const Nav = () => {
-  const { openSidebar } = useProductsContext()
-  const { myUser } = useUserContext()
+  const { openSidebar } = useProductsContext();
+  const { myUser } = useUserContext();
+  const [scroll, setScroll] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.pageYOffset > 0) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <NavContainer>
+    <NavContainer scroll={scroll}>
       <div className="nav-center">
         <div className="nav-header">
           <Link to="/">
-            <h4>FurnishNow</h4>
+            <h4>Gadget junkies</h4>
           </Link>
           <button type="button" className="nav-toggle" onClick={openSidebar}>
             <FaBars />
@@ -40,13 +58,24 @@ const Nav = () => {
       </div>
     </NavContainer>
   );
-}
+};
 
 const NavContainer = styled.nav`
   height: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #fff;
+  box-shadow: ${(props) =>
+    props.scroll ? "0 2px 4px rgba(0, 0, 0, 0.1)" : "none"};
 
   .nav-center {
     width: 90vw;
@@ -58,7 +87,7 @@ const NavContainer = styled.nav`
     align-items: center;
     justify-content: space-between;
     h4 {
-      color: var(--clr-primary-1);
+      color: var(--clr-primary-3);
     }
   }
   .nav-toggle {
