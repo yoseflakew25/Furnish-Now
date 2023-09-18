@@ -38,6 +38,7 @@ const Wrapper = styled.section`
   }
   .contact-form {
     width: 90vw;
+    height: 3rem;
     max-width: 500px;
     display: grid;
     grid-template-columns: 1fr auto;
@@ -69,10 +70,11 @@ const Wrapper = styled.section`
     letter-spacing: var(--spacing);
     cursor: pointer;
     transition: var(--transition);
-    color: var(--clr-black);
+    color: white;
   }
   .submit-btn:hover {
-    color: var(--clr-white);
+    color: var(--clr-grey-1);
+    background: var(--clr-primary-8);
   }
   @media (min-width: 992px) {
     .content {
@@ -89,6 +91,6 @@ const Wrapper = styled.section`
   @media (min-width: 1280px) {
     padding: 15rem 0;
   }
-`
+`;
 
 export default Contact

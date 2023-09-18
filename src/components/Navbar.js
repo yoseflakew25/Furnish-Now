@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
-import { FaBars } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
-import { links } from '../utils/constants';
-import CartButtons from './CartButtons';
-import { useProductsContext } from '../context/products_context';
-import { useUserContext } from '../context/user_context';
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import { FaBars } from "react-icons/fa";
+import { NavLink } from "react-router-dom"; // Import NavLink
+import { links } from "../utils/constants";
+import CartButtons from "./CartButtons";
+import { useProductsContext } from "../context/products_context";
+import { useUserContext } from "../context/user_context";
 
 const Nav = () => {
   const { openSidebar } = useProductsContext();
@@ -21,20 +21,20 @@ const Nav = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
-    <NavContainer scroll={scroll}>
+    <NavContainer scroll={scroll} className={scroll ? "glassmorphism" : ""}>
       <div className="nav-center">
         <div className="nav-header">
-          <Link to="/">
-            <h4>Gadget junkies</h4>
-          </Link>
+          <NavLink exact to="/" activeClassName="active">
+            <h4>Furnish Now</h4>
+          </NavLink>
           <button type="button" className="nav-toggle" onClick={openSidebar}>
             <FaBars />
           </button>
@@ -44,13 +44,17 @@ const Nav = () => {
             const { id, text, url } = link;
             return (
               <li key={id}>
-                <Link to={url}>{text}</Link>
+                <NavLink to={url} activeClassName="active">
+                  {text}
+                </NavLink>
               </li>
             );
           })}
           {myUser && (
             <li>
-              <Link to="/checkout">checkout</Link>
+              <NavLink to="/checkout" activeClassName="active">
+                checkout
+              </NavLink>
             </li>
           )}
         </ul>
@@ -69,13 +73,14 @@ const NavContainer = styled.nav`
   top: 0;
   z-index: 1;
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  background-color: #fff;
   box-shadow: ${(props) =>
     props.scroll ? "0 2px 4px rgba(0, 0, 0, 0.1)" : "none"};
+
+  &.glassmorphism {
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
 
   .nav-center {
     width: 90vw;
@@ -130,6 +135,9 @@ const NavContainer = styled.nav`
           border-bottom: 2px solid var(--clr-primary-7);
         }
       }
+      .active {
+        border-bottom: 2px solid var(--clr-primary-7);
+      }
     }
     .cart-btn-wrapper {
       display: grid;
@@ -137,4 +145,4 @@ const NavContainer = styled.nav`
   }
 `;
 
-export default Nav
+export default Nav;

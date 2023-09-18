@@ -49,7 +49,7 @@ const Wrapper = styled.article`
     cursor: pointer;
     svg {
       font-size: 1.25rem;
-      color: var(--clr-white);
+      color: white;
     }
   }
   .container:hover img {

@@ -39,7 +39,7 @@ const Wrapper = styled.section`
   }
   padding: 5rem 0;
 
-  background: var(--clr-primary-10);
+  background: var(--clr-primary-9);
 
   .header h3 {
     margin-bottom: 2rem;
@@ -55,22 +55,26 @@ const Wrapper = styled.section`
     gap: 2.5rem;
   }
   .service {
-    background: var(--clr-primary-7);
+    background: #85705e;
     text-align: center;
     padding: 2.5rem 2rem;
     border-radius: 32px;
     transition: all 300ms ease-in-out;
     border: 4px solid transparent;
     p {
-      color: var(--clr-primary-2);
+      color: var(--clr-primary-9);
     }
   }
   .service:hover {
-    background: var(--clr-primary-10);
-    border: 4px solid hsl(22, 28%, 21%);
-
+    background: var(--clr-primary-9);
+    border: 4px solid #3e2e20;
     border-radius: 48px;
   }
+
+  .service:hover p {
+    color: var(--clr-primary-1);
+  }
+
   span {
     width: 4rem;
     height: 4rem;
