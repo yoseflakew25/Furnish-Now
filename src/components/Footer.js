@@ -7,11 +7,18 @@ const Footer = () => {
         &copy; {new Date().getFullYear()}
         <span> ComfySloth </span>
       </h5>
-      <h5>All rights reserved</h5>
+      <h5>All rights reserved - </h5>
       <br />
-      <h5 className='credit'>Made with love by</h5>
+      <h5>
+        made with <span className='heart'>♥</span> by
+        <a href="https://github.com/yoseflakew25" target="_blank">
+          {" "}
+          Yosef Lakew
+        </a>
+      </h5>
     </Container>
-  )
+  );
+  
 }
 
 const Container = styled.footer`
@@ -23,7 +30,7 @@ const Container = styled.footer`
   background: var(--clr-black);
   text-align: center;
   span {
-    color: var(--clr-primary-6);
+    color: var(--clr-primary-7);
   }
   h5 {
     color: white;
@@ -33,9 +40,15 @@ const Container = styled.footer`
     text-transform: none;
     line-height: 1.25;
   }
-  .credit {
-    display: block,
-  } @media (min-width: 776px) {
+  h5 .heart{
+    color: red;
+   
+  }
+  h5 a {
+    color: var(--clr-primary-7)
+  }
+
+  @media (min-width: 776px) {
     flex-direction: row;
   }
 `;
