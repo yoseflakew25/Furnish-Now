@@ -25,6 +25,10 @@ const AboutPage = () => {
             similique amet. Ex, voluptate accusamus nesciunt totam vitae esse
             iste.
           </p>
+          <button>
+            Visit Github
+          </button>
+          
         </article>
       </Wrapper>
     </main>
