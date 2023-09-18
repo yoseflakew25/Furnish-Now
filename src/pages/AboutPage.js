@@ -5,13 +5,13 @@ import aboutImg from '../assets/hero-bcg.svg'
 const AboutPage = () => {
   return (
     <main>
-      <PageHero title='about' />
-      <Wrapper className='page section section-center'>
-        <img src={aboutImg} alt='nice desk' />
+      <PageHero title="about" />
+      <Wrapper className="page section section-center">
+        <img src={aboutImg} alt="nice desk" />
         <article>
-          <div className='title'>
+          <div className="title">
             <h2>About The Website</h2>
-            <div className='underline'></div>
+            <div className="underline"></div>
           </div>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
@@ -25,14 +25,17 @@ const AboutPage = () => {
             similique amet. Ex, voluptate accusamus nesciunt totam vitae esse
             iste.
           </p>
-          <button>
+          <a
+            href="https://github.com/yoseflakew25/Furnish-Now"
+            target="_blank"
+            className="btn hero-btn"
+          >
             Visit Github
-          </button>
-          
+          </a>
         </article>
       </Wrapper>
     </main>
-  )
+  );
 }
 const Wrapper = styled.section`
   display: grid;
@@ -51,6 +54,11 @@ const Wrapper = styled.section`
     margin-top: 2rem;
     color: var(--clr-grey-5);
   }
+  .hero-btn {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    margin-top: 1rem
+  }
   .title {
     text-align: left;
   }
@@ -60,5 +68,5 @@ const Wrapper = styled.section`
   @media (min-width: 992px) {
     grid-template-columns: 1fr 1fr;
   }
-`
+`;
 export default AboutPage

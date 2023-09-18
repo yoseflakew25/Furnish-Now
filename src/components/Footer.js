@@ -8,6 +8,8 @@ const Footer = () => {
         <span> ComfySloth </span>
       </h5>
       <h5>All rights reserved</h5>
+      <br />
+      <h5 className='credit'>Made with love by</h5>
     </Container>
   )
 }
@@ -31,9 +33,11 @@ const Container = styled.footer`
     text-transform: none;
     line-height: 1.25;
   }
-  @media (min-width: 776px) {
+  .credit {
+    display: block,
+  } @media (min-width: 776px) {
     flex-direction: row;
   }
-`
+`;
 
 export default Footer
