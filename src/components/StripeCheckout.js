@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import Confetti from "react-confetti";
 import { loadStripe } from '@stripe/stripe-js';
 import {
   CardElement,
@@ -16,6 +17,7 @@ import { useNavigate } from 'react-router-dom';
 const promise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 
 const CheckoutForm = () => {
+   
   const { cart, total_amount, shipping_fee, clearCart } = useCartContext();
   const { myUser } = useUserContext();
   const navigate = useNavigate();
@@ -27,7 +29,32 @@ const CheckoutForm = () => {
   const stripe = useStripe();
   const elements = useElements();
 
+  const useWindowSize = () => {
+    const [windowSize, setWindowSize] = useState({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
+
+    useEffect(() => {
+      const handleResize = () => {
+        setWindowSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      };
+
+      window.addEventListener("resize", handleResize);
+
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }, []);
+
+    return windowSize;
+  };
+const { width, height } = useWindowSize();
   const createPaymentIntent = async () => {
+     
     try {
       const { data } = await axios.post(
         '/.netlify/functions/create-payment-intent',
@@ -62,6 +89,7 @@ const CheckoutForm = () => {
     },
   };
   const handleChange = async (event) => {
+   
     // Listen for changes in the CardElement
     // and display any errors as the customer types their card details
     setDisabled(event.empty);
@@ -91,11 +119,15 @@ const CheckoutForm = () => {
   return (
     <div>
       {succeeded ? (
-        <article>
-          <h4>Thank you</h4>
-          <h4>Your payment was successful!</h4>
-          <h4>Redirecting to home page shortly</h4>
-        </article>
+        <>
+          <Confetti width={width} height={height} />
+
+          <article>
+            <h4>Thank you</h4>
+            <h4>Your payment was successful!</h4>
+            <h4>Redirecting to home page shortly</h4>
+          </article>
+        </>
       ) : (
         <article>
           <h4>Hello, {myUser && myUser.name}</h4>
@@ -103,30 +135,30 @@ const CheckoutForm = () => {
           <p>Test Card Number: 4242 4242 4242 4242</p>
         </article>
       )}
-      <form id='payment-form' onSubmit={handleSubmit}>
+      <form id="payment-form" onSubmit={handleSubmit}>
         <CardElement
-          id='card-element'
+          id="card-element"
           options={cardStyle}
           onChange={handleChange}
         />
-        <button disabled={processing || disabled || succeeded} id='submit'>
-          <span id='button-text'>
-            {processing ? <div className='spinner' id='spinner'></div> : 'Pay'}
+        <button disabled={processing || disabled || succeeded} id="submit">
+          <span id="button-text">
+            {processing ? <div className="spinner" id="spinner"></div> : "Pay"}
           </span>
         </button>
         {/* Show any error that happens when processing the payment */}
         {error && (
-          <div className='card-error' role='alert'>
+          <div className="card-error" role="alert">
             {error}
           </div>
         )}
         {/* Show a success message upon completion */}
-        <p className={succeeded ? 'result-message' : 'result-message hidden'}>
+        <p className={succeeded ? "result-message" : "result-message hidden"}>
           Payment succeeded, see the result in your
           <a href={`https://dashboard.stripe.com/test/payments`}>
-            {' '}
+            {" "}
             Stripe dashboard.
-          </a>{' '}
+          </a>{" "}
           Refresh the page to pay again.
         </p>
       </form>
