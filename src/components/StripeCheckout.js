@@ -120,7 +120,7 @@ const { width, height } = useWindowSize();
     <div>
       {succeeded ? (
         <>
-          <Confetti width={width} height={height} tweenDuration={2000} />;
+          <Confetti width={width} height={height} />;
           <article>
             <h4>Thank you</h4>
             <h4>Your payment was successful!</h4>
