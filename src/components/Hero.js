@@ -55,7 +55,7 @@ const Wrapper = styled.section`
       font-size: 1.25rem;
     }
     .hero-btn {
-      padding: 0.50rem 1.5rem;
+      padding: 0.5rem 1.5rem;
       font-size: 1rem;
     }
     .img-container {
@@ -69,6 +69,19 @@ const Wrapper = styled.section`
       border-radius: var(--radius);
       display: block;
       object-fit: cover;
+      animation: float 5s ease-out infinite;
+    }
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-40px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
     }
     .accent-img {
       position: absolute;
@@ -78,8 +91,7 @@ const Wrapper = styled.section`
       transform: translateX(-50%);
       border-radius: var(--radius);
     }
-
   }
-`
+`;
 
 export default Hero

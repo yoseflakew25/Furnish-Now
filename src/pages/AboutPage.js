@@ -46,6 +46,19 @@ const Wrapper = styled.section`
     border-radius: var(--radius);
     height: 500px;
     object-fit: cover;
+    animation: float 5s ease-out infinite;
+  }
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-40px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
   }
   p {
     line-height: 2;
@@ -57,7 +70,7 @@ const Wrapper = styled.section`
   .hero-btn {
     padding: 0.5rem 1.5rem;
     font-size: 1rem;
-    margin-top: 1rem
+    margin-top: 1rem;
   }
   .title {
     text-align: left;
