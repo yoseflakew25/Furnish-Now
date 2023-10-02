@@ -41,7 +41,7 @@ const Wrapper = styled.section`
     background: transparent;
     border-color: transparent;
     text-transform: capitalize;
-    padding: 0.5rem 2rem;
+    padding: 0.6rem 2rem;
     background: var(--clr-primary-5);
     color: white;
     border-radius: var(--radius);

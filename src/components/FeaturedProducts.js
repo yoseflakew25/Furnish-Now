@@ -50,7 +50,7 @@ const Wrapper = styled.section`
     width: 220px;
     margin: 0 auto;
     text-align: center;
-    padding: 8px 0px;
+    padding: 12px 0px;
   }
   @media (min-width: 576px) {
     .featured {

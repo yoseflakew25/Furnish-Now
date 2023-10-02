@@ -67,9 +67,11 @@ const Wrapper = styled.section`
     margin: 0 auto;
     margin-top: 2rem;
     color: var(--clr-grey-5);
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
   }
   .hero-btn {
-    padding: 0.5rem 1.5rem;
+    padding: 0.75rem 1.5rem;
     font-size: 1rem;
     margin-top: 1rem;
   }

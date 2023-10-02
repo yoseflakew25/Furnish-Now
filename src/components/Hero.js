@@ -38,11 +38,12 @@ const Wrapper = styled.section`
   }
 
   p {
+   
     line-height: 2;
     max-width: 45em;
     margin-bottom: 2rem;
     color: var(--clr-grey-5);
-    font-size: 1rem;
+    
   }
   @media (min-width: 992px) {
     height: calc(100vh - 5rem);
@@ -52,7 +53,8 @@ const Wrapper = styled.section`
       margin-bottom: 2rem;
     }
     p {
-      font-size: 1.25rem;
+      font-size: 1.1rem;
+    
     }
     .hero-btn {
       padding: 0.5rem 1.5rem;
