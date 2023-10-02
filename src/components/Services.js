@@ -36,6 +36,7 @@ const Wrapper = styled.section`
   h3,
   h4 {
     color: var(--clr-primary-1);
+    line-height: 1.5;
   }
   padding: 5rem 0;
 
@@ -55,24 +56,28 @@ const Wrapper = styled.section`
     gap: 2.5rem;
   }
   .service {
-    background: #85705e;
     text-align: center;
     padding: 2.5rem 2rem;
-    border-radius: 32px;
+
     transition: all 300ms ease-in-out;
-    border: 4px solid transparent;
-    p {
-      color: var(--clr-primary-9);
-    }
-  }
-  .service:hover {
     background: var(--clr-primary-9);
     border: 4px solid #3e2e20;
     border-radius: 48px;
+    p {
+      color: var(--clr-primary-6);
+    }
+  }
+  .service:hover {
+    background: #85705e;
+    border: 4px solid transparent;
+    border-radius: 32px;
   }
 
   .service:hover p {
-    color: var(--clr-primary-1);
+    color: var(--clr-primary-9);
+  }
+  .service:hover h4 {
+    color: var(--clr-primary-9);
   }
 
   span {
