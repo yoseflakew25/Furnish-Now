@@ -47,6 +47,7 @@ const Wrapper = styled.section`
     height: 500px;
     object-fit: cover;
     animation: float 5s ease-out infinite;
+    margin-top: -20px;
   }
   @keyframes float {
     0% {
