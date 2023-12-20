@@ -12,3 +12,15 @@ Furnish-Now is a modern and user-friendly ecommerce platform specifically design
  - **Order Management**: Track order status, view order history, and manage shipping details.
  - **Payment Integration**: Securely process payments using popular payment gateways.
  - **Responsive Design**: Enjoy a seamless shopping experience on various devices, including desktops, tablets, and mobile phones.
+
+## Usage
+
+Once the website is up and running, you can explore the features and functionalities provided. Browse the product catalog, search for specific items, add products to your cart, and proceed to checkout. If you have an account, you can log in to manage your orders and personal information.
+
+Feel free to customize and modify the codebase to fit your specific requirements. You can add new features, improve existing functionalities, or integrate additional third-party services.
+
+## Contributing
+
+Contributions to Furnish-Now are welcome! If you find any issues or have suggestions for improvement, please open an issue or submit a pull request. Make sure to follow the project's guidelines and code of conduct when contributing.
+
+Thank you for your interest in Furnish-Now! We hope you enjoy using our ecommerce platform for furniture shopping. If you have any questions or need further assistance, please don't hesitate to contact us.
