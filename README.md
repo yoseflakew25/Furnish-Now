@@ -15,12 +15,11 @@ Furnish-Now is a modern and user-friendly ecommerce platform specifically design
 
 ## Screenshots
 
-![screenshot1](https://github.com/yoseflakew25/fullstack-website-for-companies/blob/main/screenshot/Screenshot1.png)
-![screenshot2](https://github.com/yoseflakew25/fullstack-website-for-companies/blob/main/screenshot/Screenshot2.png)
-![screenshot3](https://github.com/yoseflakew25/fullstack-website-for-companies/blob/main/screenshot/Screenshot3.png)
-![screenshot4](https://github.com/yoseflakew25/fullstack-website-for-companies/blob/main/screenshot/Screenshot4.png)
-![screenshot5](https://github.com/yoseflakew25/fullstack-website-for-companies/blob/main/screenshot/Screenshot5.png)
-![screenshot6](https://github.com/yoseflakew25/fullstack-website-for-companies/blob/main/screenshot/Screenshot6.png)
+![screenshot1](https://github.com/yoseflakew25/Furnish-Now/blob/main/1.png)
+![screenshot2](https://github.com/yoseflakew25/Furnish-Now/blob/main/2.png)
+![screenshot3](https://github.com/yoseflakew25/Furnish-Now/blob/main/3.png)
+![screenshot4](https://github.com/yoseflakew25/Furnish-Now/blob/main/4.png)
+![screenshot5](https://github.com/yoseflakew25/Furnish-Now/blob/main/5.png)
 
 ## Installation
 
