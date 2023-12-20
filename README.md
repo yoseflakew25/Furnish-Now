@@ -1,4 +1,4 @@
-## Customize Project
+# Furnish-Now
 
 #### .env vars
 
