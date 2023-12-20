@@ -13,6 +13,15 @@ Furnish-Now is a modern and user-friendly ecommerce platform specifically design
  - **Payment Integration**: Securely process payments using popular payment gateways.
  - **Responsive Design**: Enjoy a seamless shopping experience on various devices, including desktops, tablets, and mobile phones.
 
+## Screenshots
+
+![screenshot1](https://github.com/yoseflakew25/fullstack-website-for-companies/blob/main/screenshot/Screenshot1.png)
+![screenshot2](https://github.com/yoseflakew25/fullstack-website-for-companies/blob/main/screenshot/Screenshot2.png)
+![screenshot3](https://github.com/yoseflakew25/fullstack-website-for-companies/blob/main/screenshot/Screenshot3.png)
+![screenshot4](https://github.com/yoseflakew25/fullstack-website-for-companies/blob/main/screenshot/Screenshot4.png)
+![screenshot5](https://github.com/yoseflakew25/fullstack-website-for-companies/blob/main/screenshot/Screenshot5.png)
+![screenshot6](https://github.com/yoseflakew25/fullstack-website-for-companies/blob/main/screenshot/Screenshot6.png)
+
 ## Installation
 
 Follow these steps to set up the project locally:
