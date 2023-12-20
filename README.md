@@ -13,6 +13,38 @@ Furnish-Now is a modern and user-friendly ecommerce platform specifically design
  - **Payment Integration**: Securely process payments using popular payment gateways.
  - **Responsive Design**: Enjoy a seamless shopping experience on various devices, including desktops, tablets, and mobile phones.
 
+## Installation
+
+Follow these steps to set up the project locally:
+
+1. Clone the repository using the following command:
+
+```
+git clone https://github.com/yoseflakew25/Furnish-Now.git
+```
+
+2. Navigate to the project directory:
+
+```
+cd Furnish-Now
+```
+
+3. Install the dependencies:
+
+```
+npm install
+```
+
+4. Create a .env file in the project root directory and add the necessary environment variables. Refer to the .env.example file for the required variables.
+
+Start the development server:
+
+```
+npm start
+```
+
+5. Open your browser and visit http://localhost:3000 to access the Furnish-Now website.
+
 ## Usage
 
 Once the website is up and running, you can explore the features and functionalities provided. Browse the product catalog, search for specific items, add products to your cart, and proceed to checkout. If you have an account, you can log in to manage your orders and personal information.
