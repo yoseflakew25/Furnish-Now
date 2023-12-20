@@ -37,7 +37,7 @@ npm install
 
 4. Create a .env file in the project root directory and add the necessary environment variables. Refer to the .env.example file for the required variables.
 
-- Start the development server:
+  Start the development server:
 
 ```
 npm start
